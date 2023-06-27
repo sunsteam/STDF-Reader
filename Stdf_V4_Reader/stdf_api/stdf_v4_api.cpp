@@ -1647,13 +1647,13 @@ const char* StdfSDR::get_handler_id() const
 
 const char* StdfSDR::get_probecard_type() const
 {
-    if(impl->CABL_TYP.empty()) return nullptr;
+    if(impl->CARD_TYP.empty()) return nullptr;
     return impl->CARD_TYP.c_str();
 }
 
 const char* StdfSDR::get_probecard_id() const
 {
-    if(impl->CABL_ID.empty()) return nullptr;
+    if(impl->CARD_ID.empty()) return nullptr;
     return impl->CARD_ID.c_str();
 }
 
@@ -1689,7 +1689,7 @@ const char* StdfSDR::get_cable_type() const
 
 const char* StdfSDR::get_cable_id() const
 {
-    if(impl->CARD_ID.empty()) return nullptr;
+    if(impl->CABL_ID.empty()) return nullptr;
     return impl->CABL_ID.c_str();
 }
 

@@ -82,8 +82,7 @@ void MainWindow::table_set_value(int row, int col, unsigned short value)
 
 void MainWindow::table_set_value(int row, int col, float value)
 {
-    QString str_number;
-    str_number.sprintf("%f", value);
+    QString str_number = QString("%1").arg(value,0,'g',6);
     ui->RecordTableWidget->setItem(row, col, new QTableWidgetItem(str_number));
 }
 
